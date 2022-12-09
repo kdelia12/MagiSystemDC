@@ -41,10 +41,8 @@ const reply = (message, content) => {
 }
 
 client.on("messageCreate", async function (message) {
-    //not replying to bot messages
-    // bot only works in DMs
-    if (message.channel.id == "1050280987856216075") {
-        if (message.author.bot) return;
+    if (message.author.bot) return;
+    if (message.channel.id == "1050280987856216075" || message.guild == null && message.author.id !== 'botDiscordId') {
         console.log(message.cleanContent);
         (async () => {
             const gptResponse = await openai.createCompletion({
