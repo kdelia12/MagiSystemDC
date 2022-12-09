@@ -48,7 +48,7 @@ client.on("messageCreate", async function (message) {
             const gptResponse = await openai.createCompletion({
                 model: "text-davinci-003",
                 temperature: 0.6,
-                prompt: prompt + message.cleanContent,
+                prompt: prompt + 'You :' + message.cleanContent,
                 "max_tokens": 100,
                 top_p: 0.3,
                 frequency_penalty: 0.5,
@@ -59,6 +59,7 @@ client.on("messageCreate", async function (message) {
                 return
             };
             reply(message, gptResponse.data.choices[0].text);
+            prompt += `magi : ${gptResponse.data.choices[0].text}\n`;
         })();
     }
 });
