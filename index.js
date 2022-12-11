@@ -42,7 +42,7 @@ const reply = (message, content) => {
 
 client.on("messageCreate", async function (message) {
     if (message.author.bot) return;
-    if (message.channel.id == "1050280987856216075" || message.guild == null && message.author.id !== 'botDiscordId') {
+    if (message.channel.id == "1050280987856216075" || message.channel.id == "1051502050434895953" || message.guild == null && message.author.id !== 'botDiscordId') {
         console.log(message.cleanContent);
         (async () => {
             const gptResponse = await openai.createCompletion({
