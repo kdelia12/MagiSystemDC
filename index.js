@@ -12,9 +12,6 @@ const {
     Client,
     GatewayIntentBits
 } = require('discord.js');
-client.user.setActivity('Komm, Susser Tod', {
-    type: 'PLAYING'
-});
 const client = new Client({
     intents: [
         GatewayIntentBits.DirectMessages,
