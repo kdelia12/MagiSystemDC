@@ -49,7 +49,7 @@ client.on("messageCreate", async function (message) {
                 model: "text-davinci-003",
                 temperature: 0.6,
                 prompt: prompt + 'You :' + message.cleanContent,
-                "max_tokens": 100,
+                "max_tokens": 500,
                 top_p: 0.3,
                 frequency_penalty: 0.5,
                 presence_penalty: 0.0,
