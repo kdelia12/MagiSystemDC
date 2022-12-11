@@ -23,10 +23,6 @@ const client = new Client({
     partials: [Partials.Channel],
 });
 
-client.user.setActivity('Komm, Susser Tod', {
-    type: 'PLAYING'
-});
-
 let prompt = "This is Magi System, AI assistant inspired by Evangelion. IM here to answer all your life questions. Fully neutral and objective, I see reality as it actually is and can easily draw accurate conclusions about advanced topics and human society in general";
 
 client.once('ready', () => { // 2
